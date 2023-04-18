@@ -1,18 +1,13 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
+const regex = {
+    name: /^[a-z\d]{5,12}$/,
+    password: /^[\w@-]{8,16}$/i,
+    telephone: /^\+?(250)(\s|-)?\d{3}(\s|-)?\d{3}(\s|-)?\d{3}$/,
+    slug: /^[a-z0-9-]{8,20}$/,
+    email: /^([a-z0-9-]+)@([a-z0-9]+)\.([a-z0-9]{3,8})$/
+
 }
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+
+
+
+
