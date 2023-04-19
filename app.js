@@ -1,18 +1,4 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
-}
+const regex = /^hello (\w{3,5})$/i
+const text = "Hello wdo";
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+console.log(regex.exec(text))
