@@ -1,13 +1,18 @@
-const regex = {
-    name: /^[a-z\d]{5,12}$/,
-    password: /^[\w@-]{8,16}$/i,
-    telephone: /^\+?(250)(\s|-)?\d{3}(\s|-)?\d{3}(\s|-)?\d{3}$/,
-    slug: /^[a-z0-9-]{8,20}$/,
-    email: /^([a-z0-9-]+)@([a-z0-9]+)\.([a-z0-9]{3,8})$/
-
+const reverseString = (str) => {
+    if (str.length === 0) {
+        return ""
+    }
+    return reverseString(str.substring(1)) + str.charAt(0)
 }
+console.log(reverseString("Everyone Is Happy Where He is!"))
 
+/**
+reversTring("") + "a",  =>                "a"
+reversTring("a") + "k",   =>              "a" + "K"
+reversTring("ka") + "a",   =>             "a" + "K" + "a"
+reversTring("aka") + "k",   =>            "a" + "K" + "a" + "K"
+reversTring("kaka") + "N",   =>           "a" + "K" + "a" + "K" + "N"
 
+akakn
 
-
-
+ * **/
