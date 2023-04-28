@@ -1,18 +1,34 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
+const add = (num1, num2) => {
+    return num1 + num2
 }
+const mult = (num1, num2) => {
+    return num1 * num2
+}
+const division = (num1, num2) => {
+    return num1 / num2
+}
+const substraction = (num1, num2) => {
+    return num1 - num2
+}
+const operators = ["+", "-", "/", "*"];
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+const operator = operators[Math.floor(Math.random() * operators.length)];
+
+// console.log(operator)
+
+switch (operator) {
+    case "+":
+        console.log("Numbers Added: ",add(8,8))
+        break
+    case "*":
+        console.log("Multiplication: ",mult(8,8))
+        break
+    case "/":
+       console.log("Division: ",division(8,8))
+        break
+    case "-":
+        console.log("Substraction: ",substraction(8,8))
+        break
+    default:
+        console.log("Operator does not exist")
+}
