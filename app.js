@@ -1,17 +1,11 @@
-const square = (x) => {
-    return x * x;
-}
-
-const divide = (xc) => {
-    return x / 2;
-}
-
-const mapReduce = (arr, callback) => {
-    let new_arr = [];
-    for (let ar of arr) {
-        new_arr.push(callback(ar))
+const reduce2 = (arr, buildUp, acc) => {
+    for (let ar of  arr) {
+        acc = buildUp(acc, ar);
     }
-    return new_arr;
+    return acc
 }
-console.log(mapReduce([5, 6, 7], square));
-console.log(mapReduce([5, 6, 7], divide))
+const add = (a, b) => {
+    return a + b;
+}
+const sum = reduce2([2, 3, 4,5,6,7,8,8], add, 0);
+console.log(sum)
