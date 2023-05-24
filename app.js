@@ -1,18 +1,27 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
+// const funcCreator = () => {
+//     let count = 0;
+//     const add3 = (num1) => {
+//         let result = num1 + 3;
+//         return result;
+//     }
+//     return add3
+// } 
+
+
+// const generateFunc = funcCreator();
+
+// console.log(generateFunc()) 
+
+const inner = () => {
+    let counter = 0;
+    const incerement = () => {
+        return counter += 1;
+    }
+    return incerement;
 }
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+const toBerun = inner();
+
+console.log(toBerun())
+console.log(toBerun())
+console.log(toBerun())
