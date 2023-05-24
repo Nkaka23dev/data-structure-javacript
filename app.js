@@ -1,20 +1,17 @@
-const numbers = [{
-    names: "eric",
-    age: 4,
-},
-{
-    names: "Nkaka",
-    age: 3,
-},
-{
-    names: "John",
-    age: 2,
+const square = (x) => {
+    return x * x;
 }
-]
 
-const new_arr = numbers.map((value, index, arr) => {
-    return value.names +'  '+ value.age
-})
+const divide = (xc) => {
+    return x / 2;
+}
 
-console.log(new_arr)
-
+const mapReduce = (arr, callback) => {
+    let new_arr = [];
+    for (let ar of arr) {
+        new_arr.push(callback(ar))
+    }
+    return new_arr;
+}
+console.log(mapReduce([5, 6, 7], square));
+console.log(mapReduce([5, 6, 7], divide))
