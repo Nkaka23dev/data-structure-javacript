@@ -10,11 +10,3 @@ function checkCount(item) {
     return item + 6;
 } 
 
-var d = document;
-console.log('title = ' +d.title);
-console.log('url = ' +d.URL);
-console.log('referrer = ' +d.referrer);
-console.log('lastModified = ' +d.lastModified);
-
-//logs either BackCompat (Quirks Mode) or CSS1Compat (Strict Mode)
-console.log('compatibility mode = ' +d.compatMode);
