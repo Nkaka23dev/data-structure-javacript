@@ -1,27 +1,20 @@
-// const funcCreator = () => {
-//     let count = 0;
-//     const add3 = (num1) => {
-//         let result = num1 + 3;
-//         return result;
-//     }
-//     return add3
-// } 
-
-
-// const generateFunc = funcCreator();
-
-// console.log(generateFunc()) 
-
-const inner = () => {
-    let counter = 0;
-    const incerement = () => {
-        return counter += 1;
-    }
-    return incerement;
+function myFunc() {
+    let counter = 1;
+    alert("You completed only " + counter + " Exercises")
+    counter = checkCount(counter)
+    alert("You completed only " + counter + " Exercises")
 }
 
-const toBerun = inner();
+function checkCount(item) {
+    console.log("This is a nested fucntion being called");
+    return item + 6;
+} 
 
-console.log(toBerun())
-console.log(toBerun())
-console.log(toBerun())
+var d = document;
+console.log('title = ' +d.title);
+console.log('url = ' +d.URL);
+console.log('referrer = ' +d.referrer);
+console.log('lastModified = ' +d.lastModified);
+
+//logs either BackCompat (Quirks Mode) or CSS1Compat (Strict Mode)
+console.log('compatibility mode = ' +d.compatMode);
