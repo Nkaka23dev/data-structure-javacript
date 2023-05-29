@@ -1,10 +1,3 @@
-const getClass = id => content => document.querySelector(`.${id}`).textContent = content;
+const anchor = document.querySelector('a');
 
-
-const selectEle = getClass("header");
-
-selectEle("Hello people")
-
-
-
-
+console.log(Object.keys(anchor).sort())
