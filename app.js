@@ -1,16 +1,13 @@
-// const arr  = [3,4,5,6,7,8];
+// const arr = new Float32Array([3.544,4,5,2,5,2]);
 
-// console.log(arr.find(element => element === 3) !== undefined);// return true
-// console.log(arr.find(element => element > 6) )// return 6 
-
-//Normally find method return the first element that meet the condition;
-
-// const arr2 = [{ name: "Nkaka", age: 43 }, { name: "James", age: 4 }, { name: "Chris", age: 78 }]; 
-
-// console.log(arr2.find(element => element.name === "Nkaka") !== undefined)
+// console.log(arr) 
 
 
-const arr  = [3,4,5,6,7,8];
+const buffer = new ArrayBuffer(8)
 
-console.log(arr.some(element => element === 4))
-
+const arr = new Float32Array(buffer);
+arr[0] = 937
+arr[1] = 9
+arr[2] = 7
+arr[3] = 3
+console.log(arr)
