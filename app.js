@@ -1,18 +1,13 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
-}
+// const arr = new Float32Array([3.544,4,5,2,5,2]);
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+// console.log(arr) 
+
+
+const buffer = new ArrayBuffer(8)
+
+const arr = new Float32Array(buffer);
+arr[0] = 937
+arr[1] = 9
+arr[2] = 7
+arr[3] = 3
+console.log(arr)
