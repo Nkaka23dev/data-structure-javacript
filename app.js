@@ -1,18 +1,30 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
-}
+// function UserCreator(name, score) {
+//     this.name = name;
+//     this.score = score;
+// };
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+// UserCreator.prototype.increment = function () {
+//     // const that = this
+//     // function add() {
+//     //     that.score++;
+//     // }
+//     // add()
+
+//     const add = () => {
+//         this.score++;
+//     }
+//     add()
+// }
+
+// UserCreator.prototype.login = function () {
+//     console.log("Login")
+// }
+
+// const user1 = new UserCreator("Nkaka Eric", 10);
+
+// user1.increment()
+// console.log(user1.score)
+
+console.log()
+
+
