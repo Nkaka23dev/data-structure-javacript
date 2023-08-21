@@ -1,30 +1,48 @@
-// function UserCreator(name, score) {
-//     this.name = name;
-//     this.score = score;
-// };
+function userCreator(name, score) {
+    const newUser = Object.create(userFunctions)
+    newUser.name = name
+    newUser.score = score
+    return newUser
+}
 
-// UserCreator.prototype.increment = function () {
-//     // const that = this
-//     // function add() {
-//     //     that.score++;
-//     // }
-//     // add()
+const userFunctions = {
+    sayName: function () {
+        console.log("Hello, I am " + this.name)
+    },
+    increment: function () {
+        this.score += 3
+    }
+}
 
-//     const add = () => {
-//         this.score++;
-//     }
-//     add()
-// }
+const user1 = userCreator("nkaka", 5);
+user1.sayName()
+user1.increment()
+console.log("From The first factory function", user1.score)
 
-// UserCreator.prototype.login = function () {
-//     console.log("Login")
-// }
+function paidUserCreator(name, score, accountBalance) {
+    const newPaidUser = userCreator(name, score)
+    Object.setPrototypeOf(newPaidUser, paidUserFunctions)
+    newPaidUser.accountBalance = accountBalance
+    return newPaidUser
+}
 
-// const user1 = new UserCreator("Nkaka Eric", 10);
+const paidUserFunctions = {
+    incrementAccountBalance: function () {
+        this.accountBalance += 600
+    }
+}
 
-// user1.increment()
-// console.log(user1.score)
+Object.setPrototypeOf(paidUserFunctions, userFunctions);
 
-console.log()
+console.log("===========================================================")
+console.log("HERE IS THE CHILD FUNCTION INHERIETED FROM THE FIRST ONE")
+console.log("===========================================================")
 
+const paidUser = paidUserCreator("Alice", 44, 1);
+paidUser.incrementAccountBalance();
+paidUser.increment();
+
+console.log(paidUser.score)
+paidUser.sayName()
+console.log(paidUser.accountBalance);
 
