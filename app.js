@@ -1,29 +1,23 @@
-// function numberEquals(fnumber1, fnumber2) {
-//     return Math.abs(fnumber1 - fnumber2) < Number.EPSILON
-// }
+// const myVariable = "dog"
+// console.log(myVariable.charAt(0), myVariable.charCodeAt(0))
 
-// console.log(numberEquals(0.1 + 0.2, 0.3))
-
-// if (0.1 + 0.2 === 0.3) {
-//     console.log("True")
-// } else {
-//     console.log("False")
+// const myVariable = "Hello Nkaka"
+// console.log(myVariable.substring(4)) 
 
 
-// const isPrime = (n) => {
-//     if (n <= 1) {
-//         return false
-//     }
+var a = 'ab'
+var b = 'add'
 
-//     for (let i = 2; i < n; i++) {
-//         if (n % 2 === 0) {
-//             return false
-//         }
-//     }
-//     return true
+// when comparing two strings it compare to the shortest string for example in case of a = 'ab' and b = 'add' it will only compare to 'ab' and 'ad. Also it compare their charcode .
 
-// }
 
-// console.log(isPrime(22)) 
+// console.log("Red drogon".indexOf('Red'))
+// console.log('Nkaka Hello Nkaka Eric'.indexOf('Nkaka', 13))
+// console.log("He's my king from this day until his last day".indexOf('a', 25))
 
-console.log(Math.floor(Math.random() * 100))
+
+const stringFinder = (originalString, search) => {
+    return originalString.indexOf(search) !== -1
+}
+
+console.log(stringFinder("Hello Nkaka eric", "Hellod"))
