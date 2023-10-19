@@ -1,18 +1,12 @@
-const reverseString = (input) => {
- if(input === ""){
-  return ""
- } 
- return reverseString(input.substring(1)) +  input.charAt(0)
+let post = "";
+
+const jsInput = document.querySelector('input')
+const jsDiv = document.querySelector('div')
+
+
+const handleInput = () => {
+    post = jsInput.value;
+    jsDiv.textContent = post;
 }
 
-/****
- * reversString(ello) + H
- * reversString(llo) + eH
- * reversString(lo) + leH
- * reversString(o) + lleH
- *  + olleH
- *olleH
- * 
- * 
- */
-console.log(reverseString("Hello"))
+jsInput.oninput = handleInput;
