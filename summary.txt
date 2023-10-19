@@ -1,0 +1,7 @@
+Before moving to Regular expression on string here is a summary:
+
+1. STRING ACCESS: we use: charAt(), charCodeAt(), and substring()
+2. STRING COMPARISON: You can use normal operators(<,>, or =)
+3. STRING SEARCH: indexOf(), startWith() and endWith()
+2. STRING DECOMPOSITION: You can use replace()
+3. STRING REPLACE : replace()
