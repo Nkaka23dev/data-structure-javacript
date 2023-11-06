@@ -6,9 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+
+    }
+
+    .wrapper {
+        margin-top: 2rem;
+        background-color: red;
+        height: 25rem;
+        position: relative;
+    }
+
+    .child {
+        background-color: blue;
+        height: 5rem;
+        width: 6rem;
+    }
+
+    .child2 {
+        background-color: green;
+        height: 3rem;
+        width: 4rem;
+        position: absolute;
+        bottom: 0;
+    }
+</style>
 
 <body>
-    h1
+    <div class="wrapper">
+        <div class="child">
+            <div class="child2">
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
