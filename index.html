@@ -8,13 +8,28 @@
 </head>
 
 <body>
-    <form action="#">
-        <label>Enter something</label> <br />
-        <input type="text" name="som" id="som">
-    </form>
-    <div style="font-size: 4rem;">
+    <div style="margin-top: 100px;">
+        <p>
+        </p>
+        <button onclick="increment()" style="cursor: pointer;">
+            Click me to increment
+        </button>
     </div>
-    <script src="app.js"></script>
+    <script>
+        let count = 0
+        function increment() {
+            count += 1
+            updateUI()
+        }
+
+        function updateUI() {
+            const myPara = document.querySelector('p');
+            myPara.innerText = `
+            Clicked ${count} ${count === 1 || count === 0 ? 'time' : 'times'}
+            `
+        }
+        updateUI()
+    </script>
 </body>
 
 </html>
