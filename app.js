@@ -1,29 +1,20 @@
-// function numberEquals(fnumber1, fnumber2) {
-//     return Math.abs(fnumber1 - fnumber2) < Number.EPSILON
+// function Employee() {
+//   let name = "Nkaka";
+//   let salary = "35000";
+//   this.name = function () {
+//     console.log(name);
+//   };
 // }
 
-// console.log(numberEquals(0.1 + 0.2, 0.3))
+// const worker = new Employee();
 
-// if (0.1 + 0.2 === 0.3) {
-//     console.log("True")
-// } else {
-//     console.log("False")
+// worker.name();
 
+function Member(username) {
+  if (!new.target) {
+    throw new Error("Can't call this function, unless you use new keyword");
+  }
+  this.name = username;
+}
 
-// const isPrime = (n) => {
-//     if (n <= 1) {
-//         return false
-//     }
-
-//     for (let i = 2; i < n; i++) {
-//         if (n % 2 === 0) {
-//             return false
-//         }
-//     }
-//     return true
-
-// }
-
-// console.log(isPrime(22)) 
-
-console.log(Math.floor(Math.random() * 100))
+let user1 = new Member("Nkaka");

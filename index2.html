@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Danamic</title>
+</head>
+
+<body>
+    <h1>Create Element dynamically</h1>
+    <ul>
+        <li>item1</li>
+    </ul>
+    <script>
+        const items = ["Dogs", "Cows", "Hens", "Goats", "Person", "Nkaka"];
+        const container = document.querySelector('ul');
+
+        for (item of items) {
+            const createItem = document.createElement('li');
+            createItem.textContent = item;
+            contain er.appendChild(createItem);
+        }
+    </script>
+</body>
+
+</html>
