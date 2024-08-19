@@ -22,3 +22,5 @@ function filterValues(unionValue: UnionType) {
     unionValue.name;
   }
 }
+
+console.log("Hello There");
