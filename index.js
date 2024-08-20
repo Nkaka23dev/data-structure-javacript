@@ -1,5 +1,1 @@
-name = "Eric Nkaka";
-
-var name;
-
-console.log(typeof name);
+console.log(Number.MAX_VALUE > Number.MAX_SAFE_INTEGER);
